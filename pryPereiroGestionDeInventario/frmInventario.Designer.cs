@@ -28,51 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            chkAgregar = new CheckBox();
-            chkModificar = new CheckBox();
-            chkEliminar = new CheckBox();
             label1 = new Label();
-            btnSalir = new Button();
+            chkEliminar = new CheckBox();
+            chkModificar = new CheckBox();
             btnAceptar = new Button();
-            panel1 = new Panel();
-            panel1.SuspendLayout();
+            btnSalir = new Button();
+            chkAgregar = new CheckBox();
             SuspendLayout();
-            // 
-            // chkAgregar
-            // 
-            chkAgregar.AutoSize = true;
-            chkAgregar.Font = new Font("Segoe UI", 15F);
-            chkAgregar.Location = new Point(3, 14);
-            chkAgregar.Name = "chkAgregar";
-            chkAgregar.Size = new Size(188, 32);
-            chkAgregar.TabIndex = 0;
-            chkAgregar.Text = "Agregar Producto";
-            chkAgregar.UseVisualStyleBackColor = true;
-            chkAgregar.UseWaitCursor = true;
-            // 
-            // chkModificar
-            // 
-            chkModificar.AutoSize = true;
-            chkModificar.Font = new Font("Segoe UI", 15F);
-            chkModificar.Location = new Point(3, 52);
-            chkModificar.Name = "chkModificar";
-            chkModificar.Size = new Size(201, 32);
-            chkModificar.TabIndex = 1;
-            chkModificar.Text = "Modificar Producto";
-            chkModificar.UseVisualStyleBackColor = true;
-            chkModificar.UseWaitCursor = true;
-            // 
-            // chkEliminar
-            // 
-            chkEliminar.AutoSize = true;
-            chkEliminar.Font = new Font("Segoe UI", 15F);
-            chkEliminar.Location = new Point(3, 90);
-            chkEliminar.Name = "chkEliminar";
-            chkEliminar.Size = new Size(187, 32);
-            chkEliminar.TabIndex = 2;
-            chkEliminar.Text = "Eliminar Producto";
-            chkEliminar.UseVisualStyleBackColor = true;
-            chkEliminar.UseWaitCursor = true;
             // 
             // label1
             // 
@@ -86,20 +48,33 @@
             label1.Text = "Gestion De Inventario";
             label1.UseWaitCursor = true;
             // 
-            // btnSalir
+            // chkEliminar
             // 
-            btnSalir.Location = new Point(317, 82);
-            btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(104, 40);
-            btnSalir.TabIndex = 5;
-            btnSalir.Text = "Salir";
-            btnSalir.UseVisualStyleBackColor = true;
-            btnSalir.UseWaitCursor = true;
-            btnSalir.Click += btnSalir_Click;
+            chkEliminar.AutoSize = true;
+            chkEliminar.Font = new Font("Segoe UI", 15F);
+            chkEliminar.Location = new Point(12, 172);
+            chkEliminar.Name = "chkEliminar";
+            chkEliminar.Size = new Size(187, 32);
+            chkEliminar.TabIndex = 2;
+            chkEliminar.Text = "Eliminar Producto";
+            chkEliminar.UseVisualStyleBackColor = true;
+            chkEliminar.UseWaitCursor = true;
+            // 
+            // chkModificar
+            // 
+            chkModificar.AutoSize = true;
+            chkModificar.Font = new Font("Segoe UI", 15F);
+            chkModificar.Location = new Point(12, 134);
+            chkModificar.Name = "chkModificar";
+            chkModificar.Size = new Size(201, 32);
+            chkModificar.TabIndex = 1;
+            chkModificar.Text = "Modificar Producto";
+            chkModificar.UseVisualStyleBackColor = true;
+            chkModificar.UseWaitCursor = true;
             // 
             // btnAceptar
             // 
-            btnAceptar.Location = new Point(317, 14);
+            btnAceptar.Location = new Point(344, 96);
             btnAceptar.Name = "btnAceptar";
             btnAceptar.Size = new Size(104, 40);
             btnAceptar.TabIndex = 6;
@@ -108,47 +83,56 @@
             btnAceptar.UseWaitCursor = true;
             btnAceptar.Click += btnAceptar_Click;
             // 
-            // panel1
+            // btnSalir
             // 
-            panel1.BackColor = SystemColors.ActiveBorder;
-            panel1.Controls.Add(chkAgregar);
-            panel1.Controls.Add(btnSalir);
-            panel1.Controls.Add(btnAceptar);
-            panel1.Controls.Add(chkModificar);
-            panel1.Controls.Add(chkEliminar);
-            panel1.Location = new Point(12, 82);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(436, 149);
-            panel1.TabIndex = 7;
-            panel1.Visible = false;
+            btnSalir.Location = new Point(344, 164);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(104, 40);
+            btnSalir.TabIndex = 5;
+            btnSalir.Text = "Salir";
+            btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.UseWaitCursor = true;
+            btnSalir.Click += btnSalir_Click;
+            // 
+            // chkAgregar
+            // 
+            chkAgregar.AutoSize = true;
+            chkAgregar.Font = new Font("Segoe UI", 15F);
+            chkAgregar.Location = new Point(12, 96);
+            chkAgregar.Name = "chkAgregar";
+            chkAgregar.Size = new Size(188, 32);
+            chkAgregar.TabIndex = 0;
+            chkAgregar.Text = "Agregar Producto";
+            chkAgregar.UseVisualStyleBackColor = true;
+            chkAgregar.UseWaitCursor = true;
             // 
             // frmInventario
             // 
             AcceptButton = btnAceptar;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(458, 248);
-            Controls.Add(panel1);
+            ClientSize = new Size(465, 240);
+            Controls.Add(btnSalir);
+            Controls.Add(btnAceptar);
+            Controls.Add(chkAgregar);
             Controls.Add(label1);
+            Controls.Add(chkModificar);
+            Controls.Add(chkEliminar);
             Name = "frmInventario";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Inventario";
             TopMost = true;
             UseWaitCursor = true;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private CheckBox chkAgregar;
-        private CheckBox chkModificar;
-        private CheckBox chkEliminar;
         private Label label1;
-        private Button btnSalir;
+        private CheckBox chkEliminar;
+        private CheckBox chkModificar;
         private Button btnAceptar;
-        private Panel panel1;
+        private Button btnSalir;
+        private CheckBox chkAgregar;
     }
 }

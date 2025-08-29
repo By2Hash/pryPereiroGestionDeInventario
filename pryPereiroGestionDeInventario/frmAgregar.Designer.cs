@@ -39,7 +39,7 @@
             txtNombre = new TextBox();
             txtPrecio = new TextBox();
             textBox4 = new TextBox();
-            textBox5 = new TextBox();
+            txtDescripcion = new TextBox();
             SuspendLayout();
             // 
             // btnAgregar
@@ -59,7 +59,7 @@
             btnSalir.TabIndex = 1;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = true;
-            btnSalir.Click += this.btnSalir_Click;
+            btnSalir.Click += btnSalir_Click;
             // 
             // lblCodigo
             // 
@@ -124,43 +124,42 @@
             // txtNombre
             // 
             txtNombre.ForeColor = SystemColors.AppWorkspace;
-            txtNombre.Location = new Point(213, 29);
+            txtNombre.Location = new Point(208, 29);
             txtNombre.MaxLength = 25;
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(70, 23);
+            txtNombre.Size = new Size(75, 23);
             txtNombre.TabIndex = 8;
             // 
             // txtPrecio
             // 
             txtPrecio.ForeColor = SystemColors.AppWorkspace;
-            txtPrecio.Location = new Point(213, 102);
+            txtPrecio.Location = new Point(208, 102);
             txtPrecio.MaxLength = 25;
             txtPrecio.Name = "txtPrecio";
-            txtPrecio.Size = new Size(70, 23);
+            txtPrecio.Size = new Size(75, 23);
             txtPrecio.TabIndex = 9;
-            txtPrecio.TextChanged += this.txtPrecio_TextChanged;
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(213, 138);
+            textBox4.Location = new Point(208, 138);
             textBox4.Name = "textBox4";
-            textBox4.Size = new Size(70, 23);
+            textBox4.Size = new Size(75, 23);
             textBox4.TabIndex = 10;
             // 
-            // textBox5
+            // txtDescripcion
             // 
-            textBox5.Location = new Point(163, 180);
-            textBox5.Multiline = true;
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(120, 59);
-            textBox5.TabIndex = 11;
+            txtDescripcion.Location = new Point(163, 180);
+            txtDescripcion.Multiline = true;
+            txtDescripcion.Name = "txtDescripcion";
+            txtDescripcion.Size = new Size(120, 59);
+            txtDescripcion.TabIndex = 11;
             // 
             // frmAgregar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(318, 329);
-            Controls.Add(textBox5);
+            Controls.Add(txtDescripcion);
             Controls.Add(textBox4);
             Controls.Add(txtPrecio);
             Controls.Add(txtNombre);
@@ -175,7 +174,6 @@
             Name = "frmAgregar";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Agregar Producto";
-            Load += this.frmAgregar_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -193,6 +191,6 @@
         private TextBox txtNombre;
         private TextBox txtPrecio;
         private TextBox textBox4;
-        private TextBox textBox5;
+        private TextBox txtDescripcion;
     }
 }
