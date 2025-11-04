@@ -46,58 +46,66 @@
             // 
             // txtDescripcion
             // 
-            txtDescripcion.Location = new Point(224, 299);
+            txtDescripcion.Location = new Point(274, 241);
             txtDescripcion.Margin = new Padding(4, 5, 4, 5);
             txtDescripcion.Multiline = true;
             txtDescripcion.Name = "txtDescripcion";
-            txtDescripcion.Size = new Size(170, 96);
+            txtDescripcion.Size = new Size(235, 102);
             txtDescripcion.TabIndex = 35;
+            txtDescripcion.TextChanged += txtDescripcion_TextChanged;
             // 
             // txtStock
             // 
-            txtStock.Location = new Point(289, 229);
+            txtStock.Location = new Point(404, 190);
             txtStock.Margin = new Padding(4, 5, 4, 5);
             txtStock.Name = "txtStock";
             txtStock.Size = new Size(105, 31);
             txtStock.TabIndex = 34;
+            txtStock.TextChanged += txtStock_TextChanged;
+            txtStock.KeyPress += txtStock_KeyPress;
             // 
             // txtPrecio
             // 
             txtPrecio.BackColor = SystemColors.HighlightText;
             txtPrecio.ForeColor = SystemColors.WindowText;
-            txtPrecio.Location = new Point(289, 169);
+            txtPrecio.Location = new Point(404, 144);
             txtPrecio.Margin = new Padding(4, 5, 4, 5);
             txtPrecio.MaxLength = 25;
             txtPrecio.Name = "txtPrecio";
             txtPrecio.Size = new Size(105, 31);
             txtPrecio.TabIndex = 33;
+            txtPrecio.TextChanged += txtPrecio_TextChanged;
+            txtPrecio.KeyPress += txtPrecio_KeyPress;
             // 
             // txtNombre
             // 
             txtNombre.ForeColor = SystemColors.ActiveCaptionText;
-            txtNombre.Location = new Point(289, 48);
+            txtNombre.Location = new Point(274, 34);
             txtNombre.Margin = new Padding(4, 5, 4, 5);
             txtNombre.MaxLength = 25;
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(105, 31);
+            txtNombre.Size = new Size(235, 31);
             txtNombre.TabIndex = 32;
+            txtNombre.TextChanged += txtNombre_TextChanged;
             // 
             // txtCodigo
             // 
             txtCodigo.BackColor = SystemColors.Info;
             txtCodigo.ForeColor = SystemColors.ActiveCaptionText;
-            txtCodigo.Location = new Point(224, 103);
+            txtCodigo.Location = new Point(329, 93);
             txtCodigo.Margin = new Padding(4, 5, 4, 5);
             txtCodigo.MaxLength = 25;
             txtCodigo.Name = "txtCodigo";
-            txtCodigo.Size = new Size(170, 31);
+            txtCodigo.Size = new Size(180, 31);
             txtCodigo.TabIndex = 31;
+            txtCodigo.TextChanged += txtCodigo_TextChanged;
+            txtCodigo.KeyPress += txtCodigo_KeyPress;
             // 
             // lblStock
             // 
             lblStock.AutoSize = true;
             lblStock.Font = new Font("Segoe UI", 15F);
-            lblStock.Location = new Point(40, 221);
+            lblStock.Location = new Point(40, 190);
             lblStock.Margin = new Padding(4, 0, 4, 0);
             lblStock.Name = "lblStock";
             lblStock.Size = new Size(90, 41);
@@ -108,7 +116,7 @@
             // 
             lblPrecio.AutoSize = true;
             lblPrecio.Font = new Font("Segoe UI", 15F);
-            lblPrecio.Location = new Point(40, 161);
+            lblPrecio.Location = new Point(40, 144);
             lblPrecio.Margin = new Padding(4, 0, 4, 0);
             lblPrecio.Name = "lblPrecio";
             lblPrecio.Size = new Size(100, 41);
@@ -119,7 +127,7 @@
             // 
             lblDescripción.AutoSize = true;
             lblDescripción.Font = new Font("Segoe UI", 15F);
-            lblDescripción.Location = new Point(40, 291);
+            lblDescripción.Location = new Point(40, 241);
             lblDescripción.Margin = new Padding(4, 0, 4, 0);
             lblDescripción.Name = "lblDescripción";
             lblDescripción.Size = new Size(173, 41);
@@ -130,7 +138,7 @@
             // 
             lblNombre.AutoSize = true;
             lblNombre.Font = new Font("Segoe UI", 15F);
-            lblNombre.Location = new Point(40, 39);
+            lblNombre.Location = new Point(40, 34);
             lblNombre.Margin = new Padding(4, 0, 4, 0);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(128, 41);
@@ -141,7 +149,7 @@
             // 
             lblCodigo.AutoSize = true;
             lblCodigo.Font = new Font("Segoe UI", 15F);
-            lblCodigo.Location = new Point(40, 103);
+            lblCodigo.Location = new Point(40, 83);
             lblCodigo.Margin = new Padding(4, 0, 4, 0);
             lblCodigo.Name = "lblCodigo";
             lblCodigo.Size = new Size(116, 41);
@@ -150,10 +158,10 @@
             // 
             // btnSalir
             // 
-            btnSalir.Location = new Point(236, 433);
+            btnSalir.Location = new Point(40, 372);
             btnSalir.Margin = new Padding(4, 5, 4, 5);
             btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(160, 83);
+            btnSalir.Size = new Size(100, 42);
             btnSalir.TabIndex = 25;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = true;
@@ -161,13 +169,14 @@
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(40, 433);
+            btnEliminar.Location = new Point(409, 372);
             btnEliminar.Margin = new Padding(4, 5, 4, 5);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(167, 83);
+            btnEliminar.Size = new Size(100, 42);
             btnEliminar.TabIndex = 24;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // panel1
             // 
@@ -186,14 +195,14 @@
             panel1.Controls.Add(lblStock);
             panel1.Location = new Point(12, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(418, 572);
+            panel1.Size = new Size(554, 450);
             panel1.TabIndex = 36;
             // 
             // frmEliminar
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(444, 597);
+            ClientSize = new Size(578, 474);
             Controls.Add(panel1);
             Margin = new Padding(4, 5, 4, 5);
             Name = "frmEliminar";

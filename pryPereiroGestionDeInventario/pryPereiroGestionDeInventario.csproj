@@ -6,6 +6,11 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>business_inventory_maintenance_product_box_boxes_2326.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="business_inventory_maintenance_product_box_boxes_2326.ico" />
+  </ItemGroup>
 
 </Project>

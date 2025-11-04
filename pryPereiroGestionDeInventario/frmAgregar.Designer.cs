@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgregar));
             btnAgregar = new Button();
             btnSalir = new Button();
             lblCodigo = new Label();
@@ -38,7 +39,7 @@
             txtCodigo = new TextBox();
             txtNombre = new TextBox();
             txtPrecio = new TextBox();
-            textBox4 = new TextBox();
+            txtStock = new TextBox();
             txtDescripcion = new TextBox();
             pnlAgregar = new Panel();
             pnlAgregar.SuspendLayout();
@@ -46,20 +47,21 @@
             // 
             // btnAgregar
             // 
-            btnAgregar.Location = new Point(23, 420);
+            btnAgregar.Location = new Point(436, 371);
             btnAgregar.Margin = new Padding(4, 5, 4, 5);
             btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(167, 83);
+            btnAgregar.Size = new Size(100, 40);
             btnAgregar.TabIndex = 0;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.Click += btnAgregar_Click;
             // 
             // btnSalir
             // 
-            btnSalir.Location = new Point(218, 420);
+            btnSalir.Location = new Point(23, 371);
             btnSalir.Margin = new Padding(4, 5, 4, 5);
             btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(160, 83);
+            btnSalir.Size = new Size(100, 40);
             btnSalir.TabIndex = 1;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = true;
@@ -78,12 +80,11 @@
             // 
             // lblNombre
             // 
-            lblNombre.AutoSize = true;
             lblNombre.Font = new Font("Segoe UI", 15F);
             lblNombre.Location = new Point(23, 27);
             lblNombre.Margin = new Padding(4, 0, 4, 0);
             lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(128, 41);
+            lblNombre.Size = new Size(156, 39);
             lblNombre.TabIndex = 3;
             lblNombre.Text = "Nombre";
             // 
@@ -91,7 +92,7 @@
             // 
             lblDescripción.AutoSize = true;
             lblDescripción.Font = new Font("Segoe UI", 15F);
-            lblDescripción.Location = new Point(23, 279);
+            lblDescripción.Location = new Point(23, 246);
             lblDescripción.Margin = new Padding(4, 0, 4, 0);
             lblDescripción.Name = "lblDescripción";
             lblDescripción.Size = new Size(173, 41);
@@ -102,7 +103,7 @@
             // 
             lblPrecio.AutoSize = true;
             lblPrecio.Font = new Font("Segoe UI", 15F);
-            lblPrecio.Location = new Point(23, 149);
+            lblPrecio.Location = new Point(23, 137);
             lblPrecio.Margin = new Padding(4, 0, 4, 0);
             lblPrecio.Name = "lblPrecio";
             lblPrecio.Size = new Size(100, 41);
@@ -113,7 +114,7 @@
             // 
             lblStock.AutoSize = true;
             lblStock.Font = new Font("Segoe UI", 15F);
-            lblStock.Location = new Point(23, 209);
+            lblStock.Location = new Point(23, 189);
             lblStock.Margin = new Padding(4, 0, 4, 0);
             lblStock.Name = "lblStock";
             lblStock.Size = new Size(90, 41);
@@ -124,49 +125,59 @@
             // 
             txtCodigo.BackColor = SystemColors.Info;
             txtCodigo.ForeColor = SystemColors.ActiveCaptionText;
-            txtCodigo.Location = new Point(207, 90);
+            txtCodigo.Location = new Point(390, 90);
             txtCodigo.Margin = new Padding(4, 5, 4, 5);
-            txtCodigo.MaxLength = 25;
+            txtCodigo.MaxLength = 13;
             txtCodigo.Name = "txtCodigo";
-            txtCodigo.Size = new Size(170, 31);
+            txtCodigo.Size = new Size(151, 31);
             txtCodigo.TabIndex = 7;
+            txtCodigo.TextChanged += txtCodigo_TextChanged;
+            txtCodigo.KeyPress += txtCodigo_KeyPress;
             // 
             // txtNombre
             // 
             txtNombre.ForeColor = SystemColors.ActiveCaptionText;
-            txtNombre.Location = new Point(271, 35);
+            txtNombre.Location = new Point(258, 37);
             txtNombre.Margin = new Padding(4, 5, 4, 5);
-            txtNombre.MaxLength = 25;
+            txtNombre.MaxLength = 40;
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(105, 31);
+            txtNombre.Size = new Size(283, 31);
             txtNombre.TabIndex = 8;
+            txtNombre.TextChanged += txtNombre_TextChanged;
             // 
             // txtPrecio
             // 
             txtPrecio.ForeColor = SystemColors.ActiveCaptionText;
-            txtPrecio.Location = new Point(271, 157);
+            txtPrecio.Location = new Point(436, 137);
             txtPrecio.Margin = new Padding(4, 5, 4, 5);
-            txtPrecio.MaxLength = 25;
+            txtPrecio.MaxLength = 10;
             txtPrecio.Name = "txtPrecio";
             txtPrecio.Size = new Size(105, 31);
             txtPrecio.TabIndex = 9;
+            txtPrecio.TextChanged += txtPrecio_TextChanged;
+            txtPrecio.KeyPress += txtPrecio_KeyPress;
             // 
-            // textBox4
+            // txtStock
             // 
-            textBox4.Location = new Point(271, 217);
-            textBox4.Margin = new Padding(4, 5, 4, 5);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(105, 31);
-            textBox4.TabIndex = 10;
+            txtStock.Location = new Point(436, 192);
+            txtStock.Margin = new Padding(4, 5, 4, 5);
+            txtStock.MaxLength = 5;
+            txtStock.Name = "txtStock";
+            txtStock.Size = new Size(105, 31);
+            txtStock.TabIndex = 10;
+            txtStock.TextChanged += textBox4_TextChanged;
+            txtStock.KeyPress += textBox4_KeyPress;
             // 
             // txtDescripcion
             // 
-            txtDescripcion.Location = new Point(207, 287);
+            txtDescripcion.Location = new Point(258, 246);
             txtDescripcion.Margin = new Padding(4, 5, 4, 5);
+            txtDescripcion.MaxLength = 100;
             txtDescripcion.Multiline = true;
             txtDescripcion.Name = "txtDescripcion";
-            txtDescripcion.Size = new Size(170, 96);
+            txtDescripcion.Size = new Size(283, 96);
             txtDescripcion.TabIndex = 11;
+            txtDescripcion.TextChanged += txtDescripcion_TextChanged;
             // 
             // pnlAgregar
             // 
@@ -174,7 +185,7 @@
             pnlAgregar.Controls.Add(lblNombre);
             pnlAgregar.Controls.Add(txtDescripcion);
             pnlAgregar.Controls.Add(btnAgregar);
-            pnlAgregar.Controls.Add(textBox4);
+            pnlAgregar.Controls.Add(txtStock);
             pnlAgregar.Controls.Add(btnSalir);
             pnlAgregar.Controls.Add(txtPrecio);
             pnlAgregar.Controls.Add(lblCodigo);
@@ -185,7 +196,7 @@
             pnlAgregar.Controls.Add(lblStock);
             pnlAgregar.Location = new Point(12, 12);
             pnlAgregar.Name = "pnlAgregar";
-            pnlAgregar.Size = new Size(387, 520);
+            pnlAgregar.Size = new Size(554, 450);
             pnlAgregar.TabIndex = 12;
             // 
             // frmAgregar
@@ -193,9 +204,10 @@
             AcceptButton = btnAgregar;
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(409, 543);
+            ClientSize = new Size(578, 474);
             ControlBox = false;
             Controls.Add(pnlAgregar);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 5, 4, 5);
             Name = "frmAgregar";
             StartPosition = FormStartPosition.CenterScreen;
@@ -217,7 +229,7 @@
         private TextBox txtCodigo;
         private TextBox txtNombre;
         private TextBox txtPrecio;
-        private TextBox textBox4;
+        private TextBox txtStock;
         private TextBox txtDescripcion;
         private Panel pnlAgregar;
     }
